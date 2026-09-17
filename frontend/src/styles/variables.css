@@ -1,0 +1,29 @@
+:root {
+  /* Estados de un slot: el mismo color se usa en la grilla y en la leyenda. */
+  --color-libre: #1f9d55;
+  --color-libre-suave: #e3f6ea;
+  --color-separado: #c68a00;
+  --color-separado-suave: #fdf3d8;
+  --color-ocupado: #c0392b;
+  --color-ocupado-suave: #fbe6e3;
+  --color-pasado: #9aa0a6;
+  --color-pasado-suave: #f1f2f4;
+
+  --color-texto: #1d2125;
+  --color-texto-suave: #5f6874;
+  --color-fondo: #f5f6f8;
+  --color-superficie: #ffffff;
+  --color-borde: #d9dce1;
+  --color-primario: #14532d;
+  --color-whatsapp: #25d366;
+
+  --radio: 10px;
+  --espacio-xs: 4px;
+  --espacio-sm: 8px;
+  --espacio-md: 16px;
+  --espacio-lg: 24px;
+
+  /* Mínimo táctil: la mayoría entra desde el celular. */
+  --alto-tactil: 44px;
+  --sombra: 0 2px 8px rgba(0, 0, 0, 0.08);
+}

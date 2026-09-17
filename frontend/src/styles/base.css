@@ -1,0 +1,211 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--color-texto);
+  background: var(--color-fondo);
+  line-height: 1.4;
+}
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+.pagina {
+  min-height: 100vh;
+  /* Espacio extra abajo para que el panel fijo no tape la última fila. */
+  padding-bottom: 120px;
+}
+
+.pagina--centrada {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--espacio-md);
+}
+
+.contenido {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--espacio-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-md);
+}
+
+.cabecera {
+  background: var(--color-superficie);
+  border-bottom: 1px solid var(--color-borde);
+  padding: var(--espacio-md);
+  text-align: center;
+}
+
+.cabecera--admin {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-sm);
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.cabecera__titulo {
+  font-size: 1.4rem;
+}
+
+.cabecera__precio {
+  color: var(--color-texto-suave);
+  font-size: 0.95rem;
+}
+
+.cabecera__nav {
+  display: flex;
+  gap: var(--espacio-sm);
+}
+
+/* Botones: alto táctil siempre, variantes por color. */
+.boton {
+  min-height: var(--alto-tactil);
+  padding: 0 var(--espacio-md);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background: var(--color-superficie);
+  color: var(--color-texto);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.boton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.boton--icono {
+  min-width: var(--alto-tactil);
+  padding: 0 var(--espacio-sm);
+  font-size: 1.1rem;
+}
+
+.boton--principal {
+  background: var(--color-primario);
+  border-color: var(--color-primario);
+  color: #fff;
+}
+
+.boton--separado {
+  background: var(--color-separado);
+  border-color: var(--color-separado);
+  color: #fff;
+}
+
+.boton--ocupado {
+  background: var(--color-ocupado);
+  border-color: var(--color-ocupado);
+  color: #fff;
+}
+
+.boton--peligro {
+  background: var(--color-superficie);
+  border-color: var(--color-ocupado);
+  color: var(--color-ocupado);
+}
+
+.boton--whatsapp {
+  background: var(--color-whatsapp);
+  border-color: var(--color-whatsapp);
+  color: #06331a;
+  flex: 1;
+  min-height: 52px;
+  font-size: 1.05rem;
+}
+
+.boton--ancho {
+  width: 100%;
+}
+
+.campo-etiqueta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-xs);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-texto-suave);
+}
+
+.campo {
+  min-height: var(--alto-tactil);
+  padding: var(--espacio-sm);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--color-texto);
+  background: var(--color-superficie);
+  width: 100%;
+}
+
+.campo__error {
+  color: var(--color-ocupado);
+  font-weight: 500;
+}
+
+.mensaje {
+  padding: var(--espacio-sm) var(--espacio-md);
+  border-radius: var(--radio);
+  font-size: 0.95rem;
+}
+
+.mensaje--error {
+  background: var(--color-ocupado-suave);
+  color: var(--color-ocupado);
+  border: 1px solid var(--color-ocupado);
+}
+
+.mensaje--exito {
+  background: var(--color-libre-suave);
+  color: var(--color-libre);
+  border: 1px solid var(--color-libre);
+}
+
+.mensaje__lista {
+  padding-left: var(--espacio-md);
+  margin-top: var(--espacio-xs);
+}
+
+.aviso {
+  color: var(--color-texto-suave);
+  text-align: center;
+  padding: var(--espacio-lg) 0;
+}
+
+.tarjeta {
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: var(--espacio-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-md);
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.tarjeta__titulo {
+  font-size: 1.2rem;
+  text-align: center;
+}
