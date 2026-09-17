@@ -127,10 +127,18 @@ canchaya/
 
 ## Pruebas
 
+Los tests del backend corren contra **Postgres real** (no SQLite), porque el `UNIQUE` y el
+`CHECK` de la tabla `reservas` son parte de lo que se prueba. La base de test se crea una vez:
+
 ```bash
+createdb canchaya_test          # o: psql -c 'CREATE DATABASE canchaya_test OWNER canchaya;'
+
 cd backend
-php artisan test        # cubre los criterios de aceptación del API
+php artisan test                # cubre los criterios de aceptación del API
 ```
+
+La conexión de test está en `phpunit.xml` (`canchaya_test` en `127.0.0.1`). Si corres los tests
+dentro del contenedor del backend, cambia ahí `DB_HOST` a `db`.
 
 ```bash
 cd frontend
