@@ -121,11 +121,17 @@
   background: var(--color-ocupado-suave);
 }
 
-/* Lo que ya pasó se ve gris aunque esté libre. */
+/* Una hora pasada y libre ya no sirve para nada: gris entero. */
 .celda--pasado {
   border-color: var(--color-pasado);
   background: var(--color-pasado-suave);
   color: var(--color-pasado);
+}
+
+/* Una hora pasada CON reserva conserva su color: el admin aún puede liberarla. */
+.celda--historico {
+  opacity: 0.7;
+  border-style: dashed;
 }
 
 .celda--activa {
